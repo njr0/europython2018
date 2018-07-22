@@ -1,3 +1,9 @@
+"""
+hashtag.py
+
+Simple example of test code using Python's built-in unittest module.
+"""
+
 import unittest
 
 
