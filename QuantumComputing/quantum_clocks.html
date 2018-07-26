@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<style type="text/css">
+</style>
+<title>Quantum Circadean Cycles and the QFT</title>
+<script>
+var svgDocument;
+var xmlns="http://www.w3.org/2000/svg";
+actual_period = Math.floor(Math.random() * 10) + 21;
+function startup(evt) {
+	O=evt.target;
+	svgDocument=O.ownerDocument;
+	O.setAttribute("onmousedown","running=!running;offset()");
+	offset();
+        actual_period = Math.floor(Math.random() * 10) + 21;
+}
+running=false;
+t = 0;
+function offset() {
+	if (!running) return
+	onestep()
+	window.setTimeout("offset()",10)
+}
+
+function onestep(){
+        
+        angle = t * (actual_period / 21)
+	T="translate(100,100) rotate(" + angle + ")"
+	G21.setAttribute("transform", T);
+        if (t > 0 && t % 360 == 60) {
+            oldx = parseFloat(D21.getAttribute("cx"));
+            oldy = parseFloat(D21.getAttribute("cy"));
+            cx = parseFloat(C21.getAttribute("cx"));
+            cy = parseFloat(C21.getAttribute("cy"));
+            dx = Math.sin(angle * 6.28 / 360) * 3;
+            dy = Math.cos(angle * 6.28 / 360) * 3;
+            x = oldx + dx;
+            y = oldy - dy;
+            r = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy))
+            if (r > 80) {
+                x = oldx;
+                y = oldy;
+            }
+            D21.setAttribute("cx", x);
+            D21.setAttribute("cy", y);
+        }
+
+
+        angle = t * (actual_period / 22)
+	T="translate(300,100) rotate(" + angle + ")"
+	G22.setAttribute("transform", T);
+        if (t > 0 && t % 360 == 60) {
+            oldx = parseFloat(D22.getAttribute("cx"));
+            oldy = parseFloat(D22.getAttribute("cy"));
+            cx = parseFloat(C22.getAttribute("cx"));
+            cy = parseFloat(C22.getAttribute("cy"));
+            dx = Math.sin(angle * 6.28 / 360) * 3;
+            dy = Math.cos(angle * 6.28 / 360) * 3;
+            x = oldx + dx;
+            y = oldy - dy;
+            r = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy))
+            if (r > 80) {
+                x = oldx;
+                y = oldy;
+            }
+            D22.setAttribute("cx", x);
+            D22.setAttribute("cy", y);
+        }
+
+
+        angle = t * (actual_period / 23)
+	T="translate(500,100) rotate(" + angle + ")"
+	G23.setAttribute("transform", T);
+        if (t > 0 && t % 360 == 60) {
+            oldx = parseFloat(D23.getAttribute("cx"));
+            oldy = parseFloat(D23.getAttribute("cy"));
+            cx = parseFloat(C23.getAttribute("cx"));
+            cy = parseFloat(C23.getAttribute("cy"));
+            dx = Math.sin(angle * 6.28 / 360) * 3;
+            dy = Math.cos(angle * 6.28 / 360) * 3;
+            x = oldx + dx;
+            y = oldy - dy;
+            r = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy))
+            if (r > 80) {
+                x = oldx;
+                y = oldy;
+            }
+            D23.setAttribute("cx", x);
+            D23.setAttribute("cy", y);
+        }
+
+
+        angle = t * (actual_period / 24)
+	T="translate(700,100) rotate(" + angle + ")"
+	G24.setAttribute("transform", T);
+        if (t > 0 && t % 360 == 60) {
+            oldx = parseFloat(D24.getAttribute("cx"));
+            oldy = parseFloat(D24.getAttribute("cy"));
+            cx = parseFloat(C24.getAttribute("cx"));
+            cy = parseFloat(C24.getAttribute("cy"));
+            dx = Math.sin(angle * 6.28 / 360) * 3;
+            dy = Math.cos(angle * 6.28 / 360) * 3;
+            x = oldx + dx;
+            y = oldy - dy;
+            r = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy))
+            if (r > 80) {
+                x = oldx;
+                y = oldy;
+            }
+            D24.setAttribute("cx", x);
+            D24.setAttribute("cy", y);
+        }
+
+
+        angle = t * (actual_period / 25)
+	T="translate(900,100) rotate(" + angle + ")"
+	G25.setAttribute("transform", T);
+        if (t > 0 && t % 360 == 60) {
+            oldx = parseFloat(D25.getAttribute("cx"));
+            oldy = parseFloat(D25.getAttribute("cy"));
+            cx = parseFloat(C25.getAttribute("cx"));
+            cy = parseFloat(C25.getAttribute("cy"));
+            dx = Math.sin(angle * 6.28 / 360) * 3;
+            dy = Math.cos(angle * 6.28 / 360) * 3;
+            x = oldx + dx;
+            y = oldy - dy;
+            r = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy))
+            if (r > 80) {
+                x = oldx;
+                y = oldy;
+            }
+            D25.setAttribute("cx", x);
+            D25.setAttribute("cy", y);
+        }
+
+
+        angle = t * (actual_period / 26)
+	T="translate(100,500) rotate(" + angle + ")"
+	G26.setAttribute("transform", T);
+        if (t > 0 && t % 360 == 60) {
+            oldx = parseFloat(D26.getAttribute("cx"));
+            oldy = parseFloat(D26.getAttribute("cy"));
+            cx = parseFloat(C26.getAttribute("cx"));
+            cy = parseFloat(C26.getAttribute("cy"));
+            dx = Math.sin(angle * 6.28 / 360) * 3;
+            dy = Math.cos(angle * 6.28 / 360) * 3;
+            x = oldx + dx;
+            y = oldy - dy;
+            r = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy))
+            if (r > 80) {
+                x = oldx;
+                y = oldy;
+            }
+            D26.setAttribute("cx", x);
+            D26.setAttribute("cy", y);
+        }
+
+
+        angle = t * (actual_period / 27)
+	T="translate(300,500) rotate(" + angle + ")"
+	G27.setAttribute("transform", T);
+        if (t > 0 && t % 360 == 60) {
+            oldx = parseFloat(D27.getAttribute("cx"));
+            oldy = parseFloat(D27.getAttribute("cy"));
+            cx = parseFloat(C27.getAttribute("cx"));
+            cy = parseFloat(C27.getAttribute("cy"));
+            dx = Math.sin(angle * 6.28 / 360) * 3;
+            dy = Math.cos(angle * 6.28 / 360) * 3;
+            x = oldx + dx;
+            y = oldy - dy;
+            r = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy))
+            if (r > 80) {
+                x = oldx;
+                y = oldy;
+            }
+            D27.setAttribute("cx", x);
+            D27.setAttribute("cy", y);
+        }
+
+
+        angle = t * (actual_period / 28)
+	T="translate(500,500) rotate(" + angle + ")"
+	G28.setAttribute("transform", T);
+        if (t > 0 && t % 360 == 60) {
+            oldx = parseFloat(D28.getAttribute("cx"));
+            oldy = parseFloat(D28.getAttribute("cy"));
+            cx = parseFloat(C28.getAttribute("cx"));
+            cy = parseFloat(C28.getAttribute("cy"));
+            dx = Math.sin(angle * 6.28 / 360) * 3;
+            dy = Math.cos(angle * 6.28 / 360) * 3;
+            x = oldx + dx;
+            y = oldy - dy;
+            r = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy))
+            if (r > 80) {
+                x = oldx;
+                y = oldy;
+            }
+            D28.setAttribute("cx", x);
+            D28.setAttribute("cy", y);
+        }
+
+
+        angle = t * (actual_period / 29)
+	T="translate(700,500) rotate(" + angle + ")"
+	G29.setAttribute("transform", T);
+        if (t > 0 && t % 360 == 60) {
+            oldx = parseFloat(D29.getAttribute("cx"));
+            oldy = parseFloat(D29.getAttribute("cy"));
+            cx = parseFloat(C29.getAttribute("cx"));
+            cy = parseFloat(C29.getAttribute("cy"));
+            dx = Math.sin(angle * 6.28 / 360) * 3;
+            dy = Math.cos(angle * 6.28 / 360) * 3;
+            x = oldx + dx;
+            y = oldy - dy;
+            r = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy))
+            if (r > 80) {
+                x = oldx;
+                y = oldy;
+            }
+            D29.setAttribute("cx", x);
+            D29.setAttribute("cy", y);
+        }
+
+
+        angle = t * (actual_period / 30)
+	T="translate(900,500) rotate(" + angle + ")"
+	G30.setAttribute("transform", T);
+        if (t > 0 && t % 360 == 60) {
+            oldx = parseFloat(D30.getAttribute("cx"));
+            oldy = parseFloat(D30.getAttribute("cy"));
+            cx = parseFloat(C30.getAttribute("cx"));
+            cy = parseFloat(C30.getAttribute("cy"));
+            dx = Math.sin(angle * 6.28 / 360) * 3;
+            dy = Math.cos(angle * 6.28 / 360) * 3;
+            x = oldx + dx;
+            y = oldy - dy;
+            r = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy))
+            if (r > 80) {
+                x = oldx;
+                y = oldy;
+            }
+            D30.setAttribute("cx", x);
+            D30.setAttribute("cy", y);
+        }
+
+        t += 1;
+}
+</script>
+</head>
+<body>
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="800" viewbox="0 0 1000 800"
+    onload="startup(evt)" onmousedown="running=!running;offset()">
+	<style type="text/css">text { font-family: Helvetica, Verdana, Sans;}</style>
+
+        
+        <circle cx="100" cy="100" r="80" style="fill:none;stroke:black"/>
+	<g id="G21" transform="translate(100,100) rotate(0)">
+	    <line id="L21" x1="0" y1="0" x2="0" y2="-80"
+                  stroke="red" stroke-width="2"/>
+        </g>
+        <text x="100" y="50" font-size="32" text-anchor="middle">21</text>
+        <circle id="C21" cx="100" cy="280" r="80" style="fill:none;stroke:black"/>
+        <circle cx="100" cy="280" r="60" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="100" cy="280" r="40" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="100" cy="280" r="20" style="fill:none;stroke:#C0C0C0"/>
+        <circle id="D21" cx="100" cy="280" r="5" style="fill:red;stroke:none"/>
+        
+
+
+
+        <circle cx="300" cy="100" r="80" style="fill:none;stroke:black"/>
+	<g id="G22" transform="translate(300,100) rotate(0)">
+	    <line id="L22" x1="0" y1="0" x2="0" y2="-80"
+                  stroke="red" stroke-width="2"/>
+        </g>
+        <text x="300" y="50" font-size="32" text-anchor="middle">22</text>
+        <circle id="C22" cx="300" cy="280" r="80" style="fill:none;stroke:black"/>
+        <circle cx="300" cy="280" r="60" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="300" cy="280" r="40" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="300" cy="280" r="20" style="fill:none;stroke:#C0C0C0"/>
+        <circle id="D22" cx="300" cy="280" r="5" style="fill:red;stroke:none"/>
+        
+
+
+
+        <circle cx="500" cy="100" r="80" style="fill:none;stroke:black"/>
+	<g id="G23" transform="translate(500,100) rotate(0)">
+	    <line id="L23" x1="0" y1="0" x2="0" y2="-80"
+                  stroke="red" stroke-width="2"/>
+        </g>
+        <text x="500" y="50" font-size="32" text-anchor="middle">23</text>
+        <circle id="C23" cx="500" cy="280" r="80" style="fill:none;stroke:black"/>
+        <circle cx="500" cy="280" r="60" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="500" cy="280" r="40" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="500" cy="280" r="20" style="fill:none;stroke:#C0C0C0"/>
+        <circle id="D23" cx="500" cy="280" r="5" style="fill:red;stroke:none"/>
+        
+
+
+
+        <circle cx="700" cy="100" r="80" style="fill:none;stroke:black"/>
+	<g id="G24" transform="translate(700,100) rotate(0)">
+	    <line id="L24" x1="0" y1="0" x2="0" y2="-80"
+                  stroke="red" stroke-width="2"/>
+        </g>
+        <text x="700" y="50" font-size="32" text-anchor="middle">24</text>
+        <circle id="C24" cx="700" cy="280" r="80" style="fill:none;stroke:black"/>
+        <circle cx="700" cy="280" r="60" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="700" cy="280" r="40" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="700" cy="280" r="20" style="fill:none;stroke:#C0C0C0"/>
+        <circle id="D24" cx="700" cy="280" r="5" style="fill:red;stroke:none"/>
+        
+
+
+
+        <circle cx="900" cy="100" r="80" style="fill:none;stroke:black"/>
+	<g id="G25" transform="translate(900,100) rotate(0)">
+	    <line id="L25" x1="0" y1="0" x2="0" y2="-80"
+                  stroke="red" stroke-width="2"/>
+        </g>
+        <text x="900" y="50" font-size="32" text-anchor="middle">25</text>
+        <circle id="C25" cx="900" cy="280" r="80" style="fill:none;stroke:black"/>
+        <circle cx="900" cy="280" r="60" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="900" cy="280" r="40" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="900" cy="280" r="20" style="fill:none;stroke:#C0C0C0"/>
+        <circle id="D25" cx="900" cy="280" r="5" style="fill:red;stroke:none"/>
+        
+
+
+
+        <circle cx="100" cy="500" r="80" style="fill:none;stroke:black"/>
+	<g id="G26" transform="translate(100,500) rotate(0)">
+	    <line id="L26" x1="0" y1="0" x2="0" y2="-80"
+                  stroke="red" stroke-width="2"/>
+        </g>
+        <text x="100" y="450" font-size="32" text-anchor="middle">26</text>
+        <circle id="C26" cx="100" cy="680" r="80" style="fill:none;stroke:black"/>
+        <circle cx="100" cy="680" r="60" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="100" cy="680" r="40" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="100" cy="680" r="20" style="fill:none;stroke:#C0C0C0"/>
+        <circle id="D26" cx="100" cy="680" r="5" style="fill:red;stroke:none"/>
+        
+
+
+
+        <circle cx="300" cy="500" r="80" style="fill:none;stroke:black"/>
+	<g id="G27" transform="translate(300,500) rotate(0)">
+	    <line id="L27" x1="0" y1="0" x2="0" y2="-80"
+                  stroke="red" stroke-width="2"/>
+        </g>
+        <text x="300" y="450" font-size="32" text-anchor="middle">27</text>
+        <circle id="C27" cx="300" cy="680" r="80" style="fill:none;stroke:black"/>
+        <circle cx="300" cy="680" r="60" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="300" cy="680" r="40" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="300" cy="680" r="20" style="fill:none;stroke:#C0C0C0"/>
+        <circle id="D27" cx="300" cy="680" r="5" style="fill:red;stroke:none"/>
+        
+
+
+
+        <circle cx="500" cy="500" r="80" style="fill:none;stroke:black"/>
+	<g id="G28" transform="translate(500,500) rotate(0)">
+	    <line id="L28" x1="0" y1="0" x2="0" y2="-80"
+                  stroke="red" stroke-width="2"/>
+        </g>
+        <text x="500" y="450" font-size="32" text-anchor="middle">28</text>
+        <circle id="C28" cx="500" cy="680" r="80" style="fill:none;stroke:black"/>
+        <circle cx="500" cy="680" r="60" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="500" cy="680" r="40" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="500" cy="680" r="20" style="fill:none;stroke:#C0C0C0"/>
+        <circle id="D28" cx="500" cy="680" r="5" style="fill:red;stroke:none"/>
+        
+
+
+
+        <circle cx="700" cy="500" r="80" style="fill:none;stroke:black"/>
+	<g id="G29" transform="translate(700,500) rotate(0)">
+	    <line id="L29" x1="0" y1="0" x2="0" y2="-80"
+                  stroke="red" stroke-width="2"/>
+        </g>
+        <text x="700" y="450" font-size="32" text-anchor="middle">29</text>
+        <circle id="C29" cx="700" cy="680" r="80" style="fill:none;stroke:black"/>
+        <circle cx="700" cy="680" r="60" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="700" cy="680" r="40" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="700" cy="680" r="20" style="fill:none;stroke:#C0C0C0"/>
+        <circle id="D29" cx="700" cy="680" r="5" style="fill:red;stroke:none"/>
+        
+
+
+
+        <circle cx="900" cy="500" r="80" style="fill:none;stroke:black"/>
+	<g id="G30" transform="translate(900,500) rotate(0)">
+	    <line id="L30" x1="0" y1="0" x2="0" y2="-80"
+                  stroke="red" stroke-width="2"/>
+        </g>
+        <text x="900" y="450" font-size="32" text-anchor="middle">30</text>
+        <circle id="C30" cx="900" cy="680" r="80" style="fill:none;stroke:black"/>
+        <circle cx="900" cy="680" r="60" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="900" cy="680" r="40" style="fill:none;stroke:#C0C0C0"/>
+        <circle cx="900" cy="680" r="20" style="fill:none;stroke:#C0C0C0"/>
+        <circle id="D30" cx="900" cy="680" r="5" style="fill:red;stroke:none"/>
+        
+
+
+    </svg>
+</div>
+</body>
+</html>
